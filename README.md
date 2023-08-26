@@ -14,3 +14,4 @@
 本主题基于default主题修改。
 
 ## 截图预览
+![microsoft_edge_screenshot_2023年8月25日 GMT+08_00 下午10_00_26 png](https://github.com/MSDJHD/Typecho-Bootstrap5-Theme/assets/110752331/9e65bff0-a078-4e35-9893-cdcabc69bffa)
