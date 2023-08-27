@@ -24,7 +24,8 @@
 <body>
 
 <header id="header">
-    <nav class="navbar navbar-expand-md navbar-light p-3 fixed-top" style="background: rgba(248, 249, 250, 0.9);">
+<div class="container-fluid" style="height:10px"></div>
+    <nav class="navbar navbar-expand-md navbar-dark p-3 fixed-top" style="background: rgba(3, 4, 5, 0.5);backdrop-filter: blur(10px)">
         <div class="container">
             <!-- logo -->
             <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>">
