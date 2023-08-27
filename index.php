@@ -1,33 +1,45 @@
 <?php
 /**
     Theme by MSDJHD
-    采用bootstrap
+    采用bootstrap5
     由官方主题修改而成
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php');
 ?>
-<h1 class="p-3 display-3">文章</h1>
-<?php while($this->next()): ?>
-    <div class="container-fluid post">
-        <div class="p-3" id="main" role="main">
+<div class="container-fluid" style="height:112px"></div>
+<div class="p-3" id="main" role="main">
+    <div class="row">
+        <div class="col-md-9">
+            <?php while($this->next()): ?>
+            <h1 class="display-3">文章</h1>
             <a href="<?php $this->permalink() ?>">
-                <img class="rounded img-fluid" alt="Display" src=<?php $this->options->DisPicUrl() ?>></img>
+                <div class="rounded-4 p-3 bg-light border">
+                    <img class="rounded-3" style="height: 200px;width: 100%;object-fit: cover;" alt="Display" src=<?php $this->options->DisPicUrl() ?>></img>
+                    <h2 class="display-5 text-dark"><?php $this->title() ?></h2>
+                    <p class="text-secondary">
+                        <a class="text-secondary" style="text-decoration: none;" href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a>
+                        <?php $this->date('F j, Y'); ?>
+                        <?php $this->category(','); ?>
+                    </p>
+                    <a class="text-dark" href="<?php $this->permalink() ?>">
+                        <div class="post-content" itemprop="articleBody">
+                            <?php $this->content(200,'- 阅读剩余部分 -'); ?>
+                        </div>
+                    </a>
+                </div>
             </a>
-                <h2 class="display-5" itemprop="name headline">
-                    <a class="text-dark" style="text-decoration: none;" itemprop="url"
-                       href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
-                </h2>
-                <p class="text-secondary">
-                    <a class="text-secondary" style="text-decoration: none;" href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a>
-                    <?php $this->date('F j, Y'); ?>
-                    <?php $this->category(','); ?>
-                </p>
+            <?php endwhile; ?>
             <?php $this->pageNav('&laquo; 上一页', '下一页 &raquo;'); ?>
+            <br />
+        </div>
+        <div class="col-md-3">
+            <h1 class="display-3">小工具</h1>
+            <div class="rounded-4 p-3 bg-light border">
+                <?php $this->need('sidebar.php'); ?>
+            </div>
         </div>
     </div>
-<?php endwhile; ?>
-
-<?php $this->need('sidebar.php'); ?>
+<div class="container-fluid" style="height:25px"></div>
 <?php $this->need('footer.php'); ?>

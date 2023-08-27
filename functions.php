@@ -23,5 +23,25 @@ function themeConfig($form)
 
     $form->addInput($DisPicUrl);
 
+    $sidebarBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox(
+        'sidebarBlock',
+        [
+            'ShowRecentPosts'    => _t('显示最新文章'),
+            'ShowRecentComments' => _t('显示最近回复'),
+            'ShowCategory'       => _t('显示分类'),
+            'ShowArchive'        => _t('显示归档'),
+            'ShowOther'          => _t('显示其它杂项')
+        ],
+        ['ShowRecentPosts', 'ShowRecentComments', 'ShowCategory', 'ShowArchive', 'ShowOther'],
+        _t('侧边栏显示')
+    );
+
+    $form->addInput($sidebarBlock->multiMode());
 }
 
+/* 自定义首页文章分布数量 */
+function themeInit($archive) {
+if ($archive->is('index')) {
+$archive->parameter->pageSize = 10;
+}
+}
