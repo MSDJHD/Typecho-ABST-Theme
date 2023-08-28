@@ -25,11 +25,11 @@
 
 <header id="header">
 <div class="container-fluid" style="height:10px"></div>
-    <nav class="navbar navbar-expand-md navbar-dark p-3 fixed-top" style="background: rgba(3, 4, 5, 0.5);backdrop-filter: blur(10px)">
+    <nav class="navbar navbar-expand-md navbar-dark p-3 fixed-top" style="background: rgba(<?php $this->options->Color() ?>, 0.5);backdrop-filter: blur(10px)">
         <div class="container">
             <!-- logo -->
             <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>">
-                <img class="rounded" decoding="async" src=<?php $this->options->logoUrl() ?> alt="Logo" style="width:40px;">
+                <img class="rounded-2 bg-white" decoding="async" src=<?php $this->options->logoUrl() ?> alt="Logo" style="width:40px;">
             </a>
          
             <!-- 展开按钮 -->
@@ -47,12 +47,12 @@
             </div>
             
             <!-- 搜索 -->
-            <form class="collapse navbar-collapse d-flex" method="post" action="" id="search">
+            <form class="collapse navbar-collapse" method="post" action="" id="search">
                 <input type="text" name="s" class="text form-control me-2" />
                 <input type="submit" class="submit btn btn-primary" value="搜索" />
             </form>
         </div>
     </nav>
 </header><!-- end #header -->
-
+<div class="container-fluid" style="background: rgba(<?php $this->options->Color() ?>,0.3) url('<?php $this->options->bgUrl() ?>)');background-size: cover;">
 <div id="body" class="container">

@@ -10,12 +10,12 @@ $this->need('header.php');
 ?>
 <div class="container-fluid" style="height:112px"></div>
 <div class="p-3" id="main" role="main">
-    <div class="row">
+    <div class="row rounded-4 p-3" style="background: rgba(248, 249, 250, 0.6);backdrop-filter: blur(5px);box-shadow: 0px 0px 10px rgba(33,37,41,0.5)">
         <div class="col-md-9">
             <?php while($this->next()): ?>
             <h1 class="display-3">文章</h1>
             <a href="<?php $this->permalink() ?>">
-                <div class="rounded-4 p-3 bg-light border">
+                <div class="rounded-4 p-3 bg-white" style="box-shadow: 0px 0px 5px rgba(33,37,41,0.3)">
                     <img class="rounded-3" style="height: 200px;width: 100%;object-fit: cover;" alt="Display" src=<?php $this->options->DisPicUrl() ?>></img>
                     <h2 class="display-5 text-dark"><?php $this->title() ?></h2>
                     <p class="text-secondary">
@@ -32,11 +32,10 @@ $this->need('header.php');
             </a>
             <?php endwhile; ?>
             <?php $this->pageNav('&laquo; 上一页', '下一页 &raquo;'); ?>
-            <br />
         </div>
         <div class="col-md-3">
             <h1 class="display-3">小工具</h1>
-            <div class="rounded-4 p-3 bg-light border">
+            <div class="rounded-4 p-3 bg-white" style="box-shadow: 0px 0px 5px rgba(33,37,41,0.3)">
                 <?php $this->need('sidebar.php'); ?>
             </div>
         </div>
