@@ -1,4 +1,4 @@
-# [Typecho-ABST-Theme](https://github.com/MSDJHD/Typecho-Bootstrap5-Theme/)
+# [Typecho-ABST-Theme](https://github.com/MSDJHD/Typecho-ABST-Theme/)
 
 一款使用Bootstrap5制作的主题
 
