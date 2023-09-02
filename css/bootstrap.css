@@ -406,6 +406,7 @@ figure {
 img,
 svg {
   vertical-align: middle;
+  object-fit: cover;
 }
 
 table {
@@ -705,6 +706,7 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .img-thumbnail {
@@ -12059,19 +12061,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.thumbnail {
-  width: 10%;
-  height: 10%;
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-color: #e0e0e0;
-}
-.thumbnail:after {
-  content: '';
-  padding-bottom: 50%;
-  display: block;
-}
-img{max-height:100%}
+
+
 /*# sourceMappingURL=bootstrap.css.map */

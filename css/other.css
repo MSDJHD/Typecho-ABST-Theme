@@ -1,0 +1,32 @@
+/**分页**/
+.page-navigator {
+ list-style:none;
+ margin:10px 0 0;
+ padding:0.5em;
+ text-align:center;
+ font-size:.875em;
+ background-color: rgba(255,255,255,1);
+ border-radius: var(--bs-border-radius-pill);
+ box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.page-navigator li {
+ display:inline-block;
+ margin:0 4px;
+}
+.page-navigator a {
+ display:inline-block;
+ padding:0 10px;
+ height:30px;
+ line-height:30px;
+ color: #212529;
+}
+.page-navigator a:hover {
+ background-size:100% 3px;
+ background-color: rgba(0,0,0,0.1);
+ border-radius: var(--bs-border-radius-pill);
+}
+.page-navigator .current a {
+ color: #fff;
+ background-color: rgba(13,110,253,0.9);
+ border-radius: var(--bs-border-radius-pill);
+}
