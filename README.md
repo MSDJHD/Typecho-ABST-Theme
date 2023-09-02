@@ -13,4 +13,4 @@
 对于一些bug和问题，请提交Issues，我会尽量改进。
 
 ## 截图预览
-![microsoft_edge_screenshot_2023年8月27日 GMT+08_00 下午]([](https://raw.githubusercontent.com/MSDJHD/Typecho-ABST-Theme/main/screenshot.png))
+![screenshot](https://github.com/MSDJHD/Typecho-ABST-Theme/assets/110752331/7e4aca7a-e426-4192-b4a3-6d3acda3891a)
