@@ -12,7 +12,7 @@
             'author'   => _t('%s 发布的文章')
         ], '', ' - '); ?><?php $this->options->title(); ?></title>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/bootstrap.css'); ?>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.css">
     <link rel='stylesheet' href="<?php $this->options->themeUrl('/css/nprogress.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/other.css'); ?>">
     <script src="<?php $this->options->themeUrl('/js/bootstrap.js'); ?>"></script>
