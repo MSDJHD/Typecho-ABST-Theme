@@ -25,11 +25,33 @@
 
 <header id="header">
     <?php if ($this->options->tColor == 'black'):?>
-        <nav id="navbar shadow" class="navbar navbar-expand-md navbar-light p-3 fixed-top" style="background-color: rgba(<?php $this->options->Color() ?>, 0.3);backdrop-filter: blur(10px);">
+        <nav id="navbar" class="navbar navbar-expand-md navbar-light fixed-top">
+        <style>
+            #navbar {
+                background-color: rgba(<?php $this->options->Color() ?>, 0.3);
+                backdrop-filter: blur(10px);
+                box-shadow: 0px 0px 10px rgba(33,37,41,0.3);
+                padding: 1rem;
+            }
+            #nav_menu {
+                text-shadow: 0px 0px 10px rgba(255,255,255,0.3);
+            }
+        </style>
     <?php endif ?>
     
     <?php if ($this->options->tColor == 'white'):?>
-        <nav id="navbar" class="navbar navbar-expand-md navbar-dark p-3 fixed-top" style="background-color: rgba(<?php $this->options->Color() ?>, 0.3);backdrop-filter: blur(10px);box-shadow: 0px 0px 10px rgba(33,37,41,0.3);">
+        <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
+        <style>
+            #navbar {
+                background-color: rgba(<?php $this->options->Color() ?>, 0.3);
+                backdrop-filter: blur(10px);
+                box-shadow: 0px 0px 10px rgba(33,37,41,0.3);
+                padding: 1rem;
+            }
+            #nav_menu {
+                text-shadow: 0px 0px 10px rgba(33,37,41,0.3);
+            }
+        </style>
     <?php endif ?>
 
         <div class="container">
@@ -42,7 +64,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse row" id="collapsibleNavbar">
+            <div class="collapse navbar-collapse row rounded-3" id="collapsibleNavbar">
             <!-- 导航链接 -->
             <div class="col-md-8">
                 <ul class="navbar-nav" id="nav_menu">

@@ -14,16 +14,13 @@ $this->need('header.php');
 <script>
     window.addEventListener('scroll', function() {
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        var banner = document.querySelector('#banner-index');
-        if (banner && scrollTop < 200) {
-            document.getElementById('navbar').style.top = '-500px';
+        if (scrollTop > 150) {
+          document.getElementById('navbar').classList.add('show');
+          document.getElementById('upsd').classList.add('unshow');
         } else {
-            document.getElementById('navbar').style.top = '0px';
+          document.getElementById('navbar').classList.remove('show');
+          document.getElementById('upsd').classList.remove('unshow');
         }
-    });
-    window.addEventListener('scroll', function() {
-        var button = document.getElementById('controlers-top');
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > 400) {
             document.getElementById('controlers-top').classList.add('show');
         } else {
@@ -32,13 +29,36 @@ $this->need('header.php');
     });
 </script>
 <style>
+    #upsd {
+        position: fixed;
+        top: -2vh;
+        left: -10vw;
+        width: 200vw;
+        height: 100px;
+        background-color: rgba(<?php $this->options->Color() ?>,0.3);
+        filter: blur(10px);
+        transition: 0.5s ease-out;
+        opacity: 1;
+    }
+    #upsd.unshow {
+        opacity: 0;
+    }
     #navbar {
         position: fixed;
-        top: -500px;
         left: 0;
+        padding: 1.5rem;
         width: 100%;
-        transition: top 0.5s ease;
-        }
+        background: rgba(<?php $this->options->Color() ?>, 0);
+        box-shadow: 0 0 0 rgba(33,37,41,0);
+        backdrop-filter: blur(0px);
+        transition: 0.4s ease-out;
+    }
+    #navbar.show {
+        background: rgba(<?php $this->options->Color() ?>, 0.3);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        box-shadow: 0px 0px 10px rgba(33,37,41,0.3);
+      }
     #controlers-top {
         background-color: rgba(255,255,255);
         height: 50px;
@@ -51,6 +71,7 @@ $this->need('header.php');
         opacity: 0.9;
     }
 </style>
+<div id="upsd"></div>
 <div class="p-4 fixed-bottom">
     <div class="float-end">
         <a href="#">
