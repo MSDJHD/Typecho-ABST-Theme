@@ -86,7 +86,7 @@
 </header><!-- end #header -->
 
 <div id="pjax" style=
-    "background: rgba(<?php $this->options->Color() ?>,0.1) url('<?php $this->options->bgUrl() ?>)');
+    "background-image: url('<?php $this->options->bgUrl() ?>');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
